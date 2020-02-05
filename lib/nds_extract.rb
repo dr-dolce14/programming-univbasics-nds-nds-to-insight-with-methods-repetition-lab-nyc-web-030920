@@ -44,10 +44,10 @@ def total_gross(source)
   # Visit each key (i.e. director name), look up the value in the hash
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
-  grand_total = 0
+ grand_total = 0
 director = 0
 while director < list_of_directors(source).length do
-grand_total += directors_totals(source[director][:name])
+grand_total += gross_for_director(source[director])
 director += 1
 end
 grand_total
